@@ -11,5 +11,14 @@
 
 <h2>{% trans 'News and Events' %}</h2>
 
+{% for blog in news %}
+	{% include 'lr/includes/blog_row.html' %}
+{% endfor %}
+
 <h2>{% trans 'Podcasts' %}</h2>
+
+{% for podcast in podcasts %}
+	{% include 'lr/includes/podcast_row.html' %}
+{% endfor %}
+
 {% endblock %}
