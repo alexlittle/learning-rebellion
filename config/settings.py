@@ -74,9 +74,9 @@ SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
-MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, '..','static')]
+STATIC_ROOT = os.path.join(ROOT_DIR, '..', 'static')
+MEDIA_ROOT = os.path.join(ROOT_DIR, '..', 'media')
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 STATICFILES_FINDERS = [
@@ -104,7 +104,7 @@ USE_L10N = True
 
 LANGUAGES = ('en', _('English'))
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 # Database - mainly this is for the automated testing
 # a proper RDBMS should be configured in your settings_secret.py

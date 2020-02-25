@@ -1,1 +1,15 @@
-<h2>Homepage</h2>
+{% extends "base.html" %} 
+{% load i18n %} 
+{% load staticfiles %}
+
+{% block extra_head_title %}
+	{% trans 'Learning Rebellion' %}
+{% endblock extra_head_title %}
+
+{% block content %}
+<h1>{% trans 'Learning Rebellion' %}</h1>
+
+<h2>{% trans 'News and Events' %}</h2>
+
+<h2>{% trans 'Podcasts' %}</h2>
+{% endblock %}
