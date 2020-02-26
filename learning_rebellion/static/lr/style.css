@@ -15,9 +15,9 @@ e0ffff - light blue
 04689a - dark blue
 
 //f8ffff - very light blue
-#cc99ff - bright pink
+#fff - bright pink
 //2fcbfe - mid blue
-#660066 - dark blue
+#000 - dark blue
 */
 
 html {
@@ -39,8 +39,8 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #cc99ff;
-  border-top: 1px solid #2fcbfe;
+  background-color: #fff;
+  border-top: 1px solid #000;
   padding-top:10px;
 }
 
@@ -48,8 +48,8 @@ body {
 -------------------------------------------------- */
 
 .navbar-inverse {
-	background-color: #cc99ff;
-	border-color: #660066;
+	background-color: #fff;
+	border-color: #000;
 }
 
 .navbar-inverse .navbar-brand {
