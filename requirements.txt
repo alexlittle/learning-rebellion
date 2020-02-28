@@ -3,3 +3,5 @@ django-crispy-forms==1.7.1
 python-dateutil==2.7.3
 Pillow==6.2.0
 sorl-thumbnail>=12.4,<13.0
+django-autoslugged==2.0.0
+django-ckeditor==5.9.0

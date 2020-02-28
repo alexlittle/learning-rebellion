@@ -1,0 +1,26 @@
+{% load thumbnail %}
+
+<div class="row project-row">
+  <div class="col-sm-2 project-icon">
+  	{% if project.image %}
+  		{% thumbnail project.image "130x130" format="PNG" padding=True as im %}
+  			{% if project.title_url %}
+	 			 <a href="{{ project.title_url }}"><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail project-image" alt="{{ project.title }}"></a>
+			{% else %}
+	 			 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail project-image" alt="{{ project.title }}">
+  			{% endif %}
+  		{% endthumbnail %}
+	{% endif %}
+  </div>
+  <div class="col-sm-8">
+    {% if project.title_url %}
+  		<h2><a href="{{ project.title_url }}">{{ project.title }}</a></h2>
+  	{% else %}
+  		<h2>{{ project.title }}</h2>
+  	{% endif %}
+  	<p>{{ project.description }}</p>
+  	{% if project.title_url %}
+  		<p><a href="{{ project.title_url }}">Find out more...</a></p>
+  	{% endif %}
+  </div>
+</div>

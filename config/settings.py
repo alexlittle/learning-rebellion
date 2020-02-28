@@ -59,6 +59,8 @@ INSTALLED_APPS = [
     'learning_rebellion',
     'crispy_forms',
     'sorl.thumbnail',
+    'ckeditor',
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

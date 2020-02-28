@@ -1,18 +1,21 @@
 from django.contrib import admin
 
-from learning_rebellion.models import Blog, Podcast, Tracker
+from learning_rebellion.models import Podcast, Tracker, Page
 
-class BlogAdmin(admin.ModelAdmin):
-    list_display = ('display_date', 'title',  'body', 'slug')
-    search_fields = ['title',  'body', 'slug']
-  
+
+class PageAdmin(admin.ModelAdmin):
+    list_display = ('title',  'menu_title', 'slug', 'active')
+    search_fields = ['title',  'menu_title', 'slug', 'content']
+ 
 class PodcastAdmin(admin.ModelAdmin):
-    list_display = ('display_date', 'title',  'body', 'slug')
-    search_fields = ['title',  'body', 'slug']  
-
-class TrackerAdmin(admin.ModelAdmin):
-    list_display = ('tracker_date', 'ip', 'url', 'agent')
+    list_display = ('title', 'description', 'date_display')     
     
-admin.site.register(Blog, BlogAdmin)      
+class TrackerAdmin(admin.ModelAdmin):
+    list_display = ('tracker_date', 'ip', 'url', 'agent') 
+    
+
+
+admin.site.register(Page, PageAdmin)      
 admin.site.register(Podcast, PodcastAdmin) 
-admin.site.register(Tracker, TrackerAdmin)
+admin.site.register(Tracker, TrackerAdmin)  
+

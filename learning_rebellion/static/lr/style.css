@@ -13,11 +13,6 @@ f8ffff - very light blue
 e0ffff - light blue
 2fcbfe - mid blue
 04689a - dark blue
-
-//f8ffff - very light blue
-#fff - bright pink
-//2fcbfe - mid blue
-#000 - dark blue
 */
 
 html {
@@ -28,7 +23,6 @@ html {
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
-  padding-top: 50px;
   margin-bottom: 60px;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -39,20 +33,19 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #fff;
-  border-top: 1px solid #000;
+  background-color: #f8ffff;
+  border-top: 1px solid #2fcbfe;
   padding-top:10px;
 }
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+/* Customise the navbar */
 
-.navbar-inverse {
-	background-color: #fff;
-	border-color: #000;
+.navbar-light {
+	background-color: #f8ffff;
+  	border-bottom: 1px solid #2fcbfe;
 }
 
-.navbar-inverse .navbar-brand {
+.navbar-light .navbar-brand {
 	color: #5a5a5a;
 }
 
@@ -60,53 +53,17 @@ body {
 	padding: 5px 20px 3px 10px;
 }
 
-.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover{
-	color: #660066;	
-}
-
-.navbar-inverse .navbar-brand img{
-	display:inline;
-	padding-right: 10px;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-    color: #5a5a5a;
-}
-
-.navbar-inverse .navbar-nav > li > a:focus, 
-.navbar-inverse .navbar-nav > li > a:hover 
+.navbar-light .navbar-nav > .nav-item > a:focus, 
+.navbar-light .navbar-nav > .nav-item > a:hover 
 {
-	background-color: #660066;
-}
- 
-
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
-    background-color: #660066;
-    color: #fff;
+	color: #04689a;
 }
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
+.navbar-light .navbar-nav > .active  a.nav-link, 
+.navbar-light .navbar-nav > .nav-item .active > a.nav-link:focus, 
+.navbar-light .navbar-nav > .nav-item .active > a.nav-link:hover {
+    color: #04689a;
 }
-
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-  padding-right: 0;
-  padding-left: 0;
-}
-.navbar-wrapper .navbar {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-  width: auto;
-}
-
 
 /* Mapping
 -------------------------------------------------- */
@@ -122,17 +79,19 @@ body {
 }
 
 h1 {
-	color: #660066;
+	color: #04689a;
 	font-size: 150%;
 }
 
 h2 {
-	color: #660066;
+	color: #04689a;
 	font-size: 130%;
 }
 
+
+
 .content-text {
-    font-size: 130%;
+    font-size: 120%;
 }
 
 .content-text p {
@@ -174,6 +133,20 @@ h2 {
 
 .project-row img {
 	border: none ;
+}
+
+.blog-row  {
+	margin: 0 0 30px 0;
+}
+
+img.blog-single-image  {
+	margin: 50px 0 30px 0;
+}
+
+h3.blog {
+	margin-top: 0;
+	color: #04689a;
+	font-size: 120%;
 }
 
 p.company-reg {
