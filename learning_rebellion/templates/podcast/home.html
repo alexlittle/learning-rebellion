@@ -3,15 +3,15 @@
 {% load staticfiles %}
 
 {% block extra_head_title %}
-	{% trans 'Learning Rebellion - News' %}
+	{% trans 'Learning Rebellion Podcasts' %}
 {% endblock extra_head_title %}
 
 {% block content %}
-<h1>{% trans 'News' %}</h1>
+<h1>{% trans 'Podcasts' %}</h1>
 
 {% if page.object_list %}
-	{% for post in page.object_list %}
-		{% include "blog/blog-single.html" %}
+	{% for podcast in page.object_list %}
+		{% include "podcast/podcast-single.html" %}
 	{% endfor %}
 	
 	{% include "includes/pagination.html" %}
