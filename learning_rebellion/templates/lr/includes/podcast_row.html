@@ -1,7 +1,21 @@
+{% load thumbnail %}
 {% load i18n %} 
-{% load staticfiles %}
 
-<h3>{{ podcast.title }}</h3>
-<p>{{ podcast.body }}</p>
-<a href=''>Play now</a>
-<hr/>
+<div class="row blog-row">
+<div class="col-sm-1">
+  	{{ podcast.date_display|date:"d M Y" }}
+  </div>
+  <div class="col-sm-8">
+  	<h3 class="blog"><a href="{% url 'podcast_article' podcast.slug %}">{{ podcast.title }}</a></h3>
+  	{{ podcast.body|safe|truncatechars_html:250 }}
+  	<p><a href="{% url 'podcast_article' podcast.slug %}">{% trans 'more' %}</a></p>
+  	
+  </div>
+  {% if podcast.image %}
+	  <div class="col-sm-2 blog-icon">
+  		{% thumbnail podcast.image "130x130" format="PNG" padding=True as im %}
+	 		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail project-image" alt="{{ podcast.title }}">
+  		{% endthumbnail %}
+	  </div>
+  {% endif %}
+</div>

@@ -8,7 +8,7 @@ class PageAdmin(admin.ModelAdmin):
     search_fields = ['title',  'menu_title', 'slug', 'content']
  
 class PodcastAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'date_display')     
+    list_display = ('title', 'body', 'date_display')     
     
 class TrackerAdmin(admin.ModelAdmin):
     list_display = ('tracker_date', 'ip', 'url', 'agent') 

@@ -1,0 +1,28 @@
+{% extends "base.html" %} 
+{% load i18n %} 
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% block extra_head_title %}
+	{% trans 'Learning Rebellion Podcasts' %}
+{% endblock extra_head_title %}
+
+{% block content %}
+{% if podcast %}
+<div class="row blog-single">
+	{% if % if podcast .image %}
+	  <div class="col-sm-2 blog-icon">
+  		{% thumbnail podcast.image "130x130" format="PNG" padding=True as im %}
+	 		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail blog-single-image" alt="{{ blog.title }}">
+  		{% endthumbnail %}
+	  </div>
+  {% endif %}
+  <div class="col-sm-8">
+		<h1>{{ podcast.title }}</h1>
+		<p>{{ podcast.display_date|date:"d M Y"  }}</p>
+		{{ podcast.body|safe }}
+	</div>
+</div>
+{% endif %}
+
+{% endblock %}

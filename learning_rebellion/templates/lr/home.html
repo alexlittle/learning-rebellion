@@ -22,8 +22,9 @@
 
 
 {% if podcasts %}
+	<h2>{% trans 'Podcasts' %}</h2>
 	{% for podcast in podcasts %}
-		{% include "lr/includes/project-row.html" %}
+		{% include "lr/includes/podcast_row.html" %}
 	{% endfor %}
 {% endif %}
 

@@ -25,3 +25,14 @@ def home_view(request):
                            'podcasts': podcasts,
                            'page': get_page('home'),
                            'news': news })
+    
+def podcast_view(request, podcast_slug):
+    site_tracker.send(sender=None, request=request)
+    preview = request.GET.get("preview", 0)
+    if preview == "1":
+        podcast = Podcast.objects.get(slug=podcast_slug)
+    else:
+        podcast = Podcast.objects.get(slug=podcast_slug, active=True)
+    return render(request, 'podcast/podcast-full-post.html',
+                          {'podcast': podcast,
+                           'podcast_active': True})
