@@ -31,22 +31,23 @@ body {
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f8ffff;
-  border-top: 1px solid #2fcbfe;
+  background-image: url("images/banner.png");
+  background-repeat: repeat ;
+  border-top: 1px solid #ff66c4;
   padding-top:10px;
 }
 
 /* Customise the navbar */
 
 .navbar-light {
-	background-color: #f8ffff;
-  	border-bottom: 1px solid #2fcbfe;
+  	border-bottom: 1px solid #ff66c4;
+  	background-image: url("images/banner.png");
+    background-repeat: repeat-x;
 }
 
 .navbar-light .navbar-brand {
-	color: #5a5a5a;
+	color: #ff66c4;
+	font-weight: bold;
 }
 
 .navbar-brand {
@@ -62,12 +63,8 @@ body {
 .navbar-light .navbar-nav > .active  a.nav-link, 
 .navbar-light .navbar-nav > .nav-item .active > a.nav-link:focus, 
 .navbar-light .navbar-nav > .nav-item .active > a.nav-link:hover {
-    color: #04689a;
+    color: #ff66c4;
 }
-
-/* Mapping
--------------------------------------------------- */
-#mapid { height: 300px; }
 
 
 /* h tags
@@ -79,12 +76,12 @@ body {
 }
 
 h1 {
-	color: #04689a;
+	color: #ff66c4;
 	font-size: 150%;
 }
 
 h2 {
-	color: #04689a;
+	color: #ff66c4;
 	font-size: 130%;
 }
 
@@ -145,7 +142,7 @@ img.blog-single-image  {
 
 h3.blog {
 	margin-top: 0;
-	color: #04689a;
+	color: #ff66c4;
 	font-size: 120%;
 }
 
@@ -153,6 +150,10 @@ p.company-reg {
 	padding-bottom: 20px;
 	text-align: center;
 	
+}
+
+a {
+	color: #ff66c4;
 }
 
 /* RESPONSIVE CSS
