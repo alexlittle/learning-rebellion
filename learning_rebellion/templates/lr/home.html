@@ -7,7 +7,8 @@
 {% endblock extra_head_title %}
 
 {% block content %}
-<h1>{% trans 'Learning Rebellion.' %}</h1>
+<h1>{% trans 'Learning Rebellion.' %}<br/>
+<span class="strapline">{% trans 'Activate & innovate learning now!' %}</span></h1>
 
 {% if page %}
 	<div class="content-text">{{ page.content|safe }}</div>
