@@ -5,3 +5,6 @@ Pillow==6.2.0
 sorl-thumbnail>=12.4,<13.0
 django-autoslugged==2.0.0
 django-ckeditor==5.9.0
+pycodestyle
+pytest
+pytest-django

@@ -8,7 +8,7 @@
 {% endblock extra_head_title %}
 
 {% block content %}
-<h1>{% trans 'Projects' %} &gt; {{ project.title }}</h1>
+<h1><a href="{% url 'projects_home' %}">{% trans 'Projects' %}</a> &gt; {{ project.title }}</h1>
 
 {% if project.image %}
   <div class="col-sm-2 project-icon">
@@ -17,8 +17,11 @@
  		{% endthumbnail %}
   </div>
 {% endif %}
+
 <div class="content-text">{{ project.body|safe }}</div>
 
-
+{% for link in project.get_links %}
+	{% include "projects/link-row.html" %}
+{% endfor %}
 
 {% endblock %}
