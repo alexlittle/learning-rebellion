@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls import include, url
 from django.views.generic import TemplateView
-import blog
+import blog, projects
 from learning_rebellion import views as lr_views
 
 urlpatterns = [
@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^news/', include('blog.urls')),
     url(r'^podcast/$', lr_views.podcast_home_view, name="podcast_home"),
     url(r'^podcast/(?P<podcast_slug>\w[\w/-]*)$', lr_views.podcast_view, name="podcast_article"),
+    url(r'^projects/', include('projects.urls')),
 ]

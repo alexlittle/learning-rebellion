@@ -8,10 +8,10 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from learning_rebellion.models import Podcast, Tracker, Page
 from blog.models import  Blog
 from learning_rebellion.signals import site_tracker
-
+from learning_rebellion.utils import get_page
 def get_page(slug):
     try:
-        page = Page.objects.get(slug='home',active=True)
+        page = Page.objects.get(slug=slug,active=True)
     except Page.DoesNotExist:
         return None
     return page

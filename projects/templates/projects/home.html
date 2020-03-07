@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+{% load i18n %} 
+{% load staticfiles %}
+
+{% block extra_head_title %}
+	{% trans 'Learning Rebellion - Projects' %}
+{% endblock extra_head_title %}
+
+{% block content %}
+<h1>{% trans 'Projects' %}</h1>
+
+{% if project_page %}
+	<div class="content-text">{{ project_page.content|safe }}</div>
+{% endif %}
+
+{% if page.object_list %}
+	{% for post in page.object_list %}
+		{% include "blog/blog-single.html" %}
+	{% endfor %}
+	
+	{% include "includes/pagination.html" %}
+{% endif %}
+{% endblock %}

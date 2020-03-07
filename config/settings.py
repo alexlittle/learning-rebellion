@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'ckeditor',
     'blog',
+    'projects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

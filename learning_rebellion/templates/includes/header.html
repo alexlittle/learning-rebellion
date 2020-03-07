@@ -22,6 +22,9 @@
       <li class="nav-item {% if podcast_active == True %}active{% endif %}">
         <a href='{% url 'podcast_home' %}' class="nav-link">{% trans 'Podcasts' %}</a>
       </li>
+      <li class="nav-item {% if projects_active == True %}active{% endif %}">
+        <a href='{% url 'projects_home' %}' class="nav-link">{% trans 'Projects' %}</a>
+      </li>
     </ul>
   </div>
 </nav>
