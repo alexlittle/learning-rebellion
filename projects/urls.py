@@ -5,4 +5,5 @@ from projects import views as projects_views
 
 urlpatterns = [
     url(r'^$', projects_views.home_view, name="projects_home"),
+    url(r'^(?P<slug>\w[\w/-]*)$', projects_views.project_view, name="projects_single"),
 ]

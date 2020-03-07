@@ -14,8 +14,8 @@
 {% endif %}
 
 {% if page.object_list %}
-	{% for post in page.object_list %}
-		{% include "blog/blog-single.html" %}
+	{% for project in page.object_list %}
+		{% include "projects/row.html" %}
 	{% endfor %}
 	
 	{% include "includes/pagination.html" %}

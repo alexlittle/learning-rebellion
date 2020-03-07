@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+{% load i18n %} 
+{% load staticfiles %}
+{% load thumbnail %}
+
+{% block extra_head_title %}
+	{% trans 'Learning Rebellion - Projects' %}
+{% endblock extra_head_title %}
+
+{% block content %}
+<h1>{% trans 'Projects' %} &gt; {{ project.title }}</h1>
+
+{% if project.image %}
+  <div class="col-sm-2 project-icon">
+ 		{% thumbnail project.image "130x130" format="PNG" padding=True as im %}
+ 		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail project-image" alt="{{ project.title }}">
+ 		{% endthumbnail %}
+  </div>
+{% endif %}
+<div class="content-text">{{ project.body|safe }}</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load thumbnail %}
+{% load i18n %} 
+
+<div class="row project-row">
+	{% if project.image %}
+	  <div class="col-sm-2 project-icon">
+  		{% thumbnail project.image "130x130" format="PNG" padding=True as im %}
+	 		<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" class="thumbnail project-image" alt="{{ project.title }}">
+  		{% endthumbnail %}
+	  </div>
+  {% endif %}
+  <div class="col-sm-8">
+  	<h3 class="project"><a href="{% url 'projects_single' project.slug %}">{{ project.title }}</a></h3>
+  	{{ project.body|safe|truncatechars_html:250 }}
+  	<p><a href="{% url 'projects_single' project.slug %}">{% trans 'more' %}</a></p>
+  	
+  </div>
+  
+</div>
